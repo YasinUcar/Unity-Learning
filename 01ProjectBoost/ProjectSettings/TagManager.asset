@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hit
+  - Friendly
+  - Fuel
   layers:
   - Default
   - TransparentFX

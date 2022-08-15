@@ -479,6 +479,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1351726675, guid: 735e44eab0b4a474d8ec1c177a8dc948, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351726682, guid: 735e44eab0b4a474d8ec1c177a8dc948, type: 3}
+      propertyPath: sesler.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351726682, guid: 735e44eab0b4a474d8ec1c177a8dc948, type: 3}
+      propertyPath: sesler.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 694aa67bbdc9ee64584db221a358025e, type: 3}
+    - target: {fileID: 1351726682, guid: 735e44eab0b4a474d8ec1c177a8dc948, type: 3}
+      propertyPath: sesler.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 015712e8eacfe424da41d6ffd53b1226, type: 3}
     - target: {fileID: 6427533045195799416, guid: 735e44eab0b4a474d8ec1c177a8dc948, type: 3}
       propertyPath: m_Name
       value: Rocket
@@ -527,6 +543,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6427533045195799421, guid: 735e44eab0b4a474d8ec1c177a8dc948, type: 3}
+      propertyPath: mainEngine
+      value: 
+      objectReference: {fileID: 8300000, guid: cba7755b2d127b4428fad388f6e912ce, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 735e44eab0b4a474d8ec1c177a8dc948, type: 3}
 --- !u!1001 &8023638254692739721

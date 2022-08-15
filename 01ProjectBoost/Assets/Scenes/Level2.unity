@@ -224,6 +224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0a845c3b805e3843a3de07df26f0851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayLevel: 2
+  sesler:
+  - {fileID: 8300000, guid: 694aa67bbdc9ee64584db221a358025e, type: 3}
+  - {fileID: 8300000, guid: 015712e8eacfe424da41d6ffd53b1226, type: 3}
 --- !u!1 &1830918607
 GameObject:
   m_ObjectHideFlags: 0

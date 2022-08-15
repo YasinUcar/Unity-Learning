@@ -7,9 +7,8 @@ public class Movement : MonoBehaviour
 
     [SerializeField] int mainThrust;
     [SerializeField] float rotateThrust;
-
     [SerializeField] AudioClip mainEngine;
-
+    [SerializeField] ParticleSystem jetParticles, leftParticle, rightParticle;
 
     Rigidbody rb;
     AudioSource audioSource;
@@ -18,6 +17,7 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+
     }
 
 
@@ -31,16 +31,12 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
-            if (!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(mainEngine);
-            }
+            StartThrust();
 
         }
         else
         {
-            audioSource.Stop();
+            StopThrusting();
         }
 
 
@@ -49,14 +45,63 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            ApplyRotation(rotateThrust);
+            RotateLeft();
+
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            ApplyRotation(-rotateThrust);
+            RotateRight();
+
+        }
+        else
+        {
+            StopRotating();
+        }
+    }
+    private void StartThrust()
+    {
+        rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(mainEngine);
+        }
+        if (!jetParticles.isPlaying)
+        {
+            jetParticles.Play();
+        }
+    }
+    private void StopThrusting()
+    {
+        audioSource.Stop();
+        jetParticles.Stop();
+    }
+
+
+
+
+
+    private void RotateRight()
+    {
+        ApplyRotation(-rotateThrust);
+        if (!leftParticle.isPlaying)
+        {
+            leftParticle.Play();
         }
     }
 
+    private void RotateLeft()
+    {
+        ApplyRotation(rotateThrust);
+        if (!rightParticle.isPlaying)
+        {
+            rightParticle.Play();
+        }
+    }
+    private void StopRotating()
+    {
+        rightParticle.Stop();
+        leftParticle.Stop();
+    }
     void ApplyRotation(float rotationThisFrame)
     {
         rb.freezeRotation = true;

@@ -1441,6 +1441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 596696714626520552, guid: 793e4810f8498104fb534aaa2b39b83c, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 596696714626520556, guid: 793e4810f8498104fb534aaa2b39b83c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1489,6 +1493,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 40577811}
+    - target: {fileID: 596696714626520557, guid: 793e4810f8498104fb534aaa2b39b83c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142394407453092942, guid: 793e4810f8498104fb534aaa2b39b83c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8551379207784425953, guid: 793e4810f8498104fb534aaa2b39b83c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

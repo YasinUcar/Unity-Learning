@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
 
     private void ChaseTarget()
     {
-        navMeshAgent.SetDestination(target.transform.position);
+        navMeshAgent.SetDestination(target.position);
     }
     private void AttackTarget()
     {

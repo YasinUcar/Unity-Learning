@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
         maxHealth -= damage;
         if (maxHealth <= Mathf.Epsilon)
         {
-            print("Öldünke");
+            GetComponent<DeathHandler>().HandleDeath();
         }
     }
 

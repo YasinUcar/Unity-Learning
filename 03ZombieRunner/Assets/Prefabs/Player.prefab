@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 13600000}
   - component: {fileID: 11400004}
   - component: {fileID: 3198188124402582348}
+  - component: {fileID: 8554409238498301442}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -317,6 +318,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &8554409238498301442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466908c3ac493bd42bf99cc880bf66f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6453049343736829525
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,23 +441,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2337074158997199750, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
   m_PrefabInstance: {fileID: 1301165215047064031}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &291628111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3630004989570335321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69a2d28c65aa6ba4c922ce05464072a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FPCamera: {fileID: 2000000}
-  range: 100
-  damage: 30
-  muzzleFlash: {fileID: 0}
-  hitEffect: {fileID: 0}
 --- !u!114 &4605266404363953426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,7 +457,7 @@ MonoBehaviour:
   range: 100
   damage: 30
   muzzleFlash: {fileID: 9098415708009268530}
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 2929471540644853872, guid: a71ab890a01698b4c89aaa6511e66e20, type: 3}
 --- !u!198 &9098415708009268530 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 7803254084156497133, guid: ada2587319194f542957a8c2ae277cb9, type: 3}

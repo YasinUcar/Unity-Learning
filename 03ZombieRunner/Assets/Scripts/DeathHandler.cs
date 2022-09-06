@@ -8,7 +8,7 @@ public class DeathHandler : MonoBehaviour
     void Start()
     {
         gameOverCanvas.enabled = false;
-       
+
     }
 
 

@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class WeaponZoom : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Camera cam;
+    [SerializeField] float zoomOutFOV = 60f;
+    [SerializeField] float zoomInFOV = 20f;
+    bool zoomInToogle = false;
     void Start()
     {
-        
+        cam = Camera.main;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (!zoomInToogle)
+            {
+                zoomInToogle = true;
+                WeaponZooming(zoomInFOV);
+            }
+            else
+            {
+                zoomInToogle = false;
+                WeaponZooming(zoomOutFOV);
+            }
+        }
+
+    }
+
+    void WeaponZooming(float zoomingRate)
+    {
+        cam.fieldOfView = zoomingRate;
     }
 }

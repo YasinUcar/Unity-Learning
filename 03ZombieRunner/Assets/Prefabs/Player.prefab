@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 3198188124402582348}
   - component: {fileID: 8554409238498301442}
   - component: {fileID: 6929360848937888127}
+  - component: {fileID: 4124493633856172546}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -346,6 +347,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoomOutFOV: 60
   zoomInFOV: 20
+  zoomOutSensivity: 2
+  zoomInSensivity: 0.5
+--- !u!114 &4124493633856172546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e659af59c0bf2c419538c873973fbcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoAmount: 10
 --- !u!1 &6453049343736829525
 GameObject:
   m_ObjectHideFlags: 0

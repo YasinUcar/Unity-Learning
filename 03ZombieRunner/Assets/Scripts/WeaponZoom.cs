@@ -17,7 +17,8 @@ public class WeaponZoom : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        rigidbodyFirstPersonController = GetComponent<RigidbodyFirstPersonController>();
+        //best method 
+        rigidbodyFirstPersonController = GameObject.FindGameObjectWithTag("myPlayer").GetComponent<RigidbodyFirstPersonController>();
     }
 
 

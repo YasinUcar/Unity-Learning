@@ -9,7 +9,7 @@ public class WeaponSwitch : MonoBehaviour
     void Start()
     {
         SetWeaponActive();
-        
+
     }
     void Update()
     {
@@ -22,6 +22,8 @@ public class WeaponSwitch : MonoBehaviour
         {
             SetWeaponActive();
         }
+
+
     }
 
     void ProcessScrollWheel()
@@ -41,7 +43,7 @@ public class WeaponSwitch : MonoBehaviour
         {
             if (currentWeapon <= 0)
             {
-                currentWeapon = transform.childCount-1;
+                currentWeapon = transform.childCount - 1;
             }
             else
             {

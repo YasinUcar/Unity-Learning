@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: New Question 1
   m_EditorClassIdentifier: 
   question: "T\xFCrkiyenin ba\u015Fkenti neresidir?"
+  answers:
+  - Samsun
+  - Ankara
+  - "\u0130stanbul"
+  - "\u0130zmir"
+  correctAnswerIndex: 1

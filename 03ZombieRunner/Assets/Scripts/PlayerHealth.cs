@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         maxHealth -= damage;
-        if (maxHealth <= Mathf.Epsilon)
+        if (maxHealth <= 0)
         {
             GetComponent<DeathHandler>().HandleDeath();
         }

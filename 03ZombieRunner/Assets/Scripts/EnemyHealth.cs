@@ -8,9 +8,9 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-       BroadcastMessage("OnDamageTaken");   
+        BroadcastMessage("OnDamageTaken");
         hitPoints -= damage;
-        if (hitPoints <= Mathf.Epsilon)
+        if (hitPoints <= 0)
         {
             Destroy(this.gameObject);
         }

@@ -51,4 +51,8 @@ public class WeaponZoom : MonoBehaviour
     {
         cam.fieldOfView = zoomingRate;
     }
+    void OnDisable()
+    {
+        WeaponZooming(zoomOutFOV);
+    }
 }

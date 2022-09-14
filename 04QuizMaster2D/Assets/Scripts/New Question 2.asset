@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "TR'de en fazla n\xFCfus nerededir"
   answers:
-  - 
-  - 
-  - 
-  - 
+  - Yozgat
+  - "Mu\u015F"
+  - "\u0130stanbul"
+  - Gaziantep
+  correctAnswerIndex: 2

@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: New Question 3
   m_EditorClassIdentifier: 
   question: "TR'de en az n\xFCfus hangi il"
+  answers:
+  - Tunceli
+  - Hakkari
+  - Manisa
+  - Mardin
+  correctAnswerIndex: 0

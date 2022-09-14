@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: New Question
   m_EditorClassIdentifier: 
   question: "Samsunun il\xE7elerinden biri de\u011Fildir?"
+  answers:
+  - Bafra
+  - "Ala\xE7am"
+  - Atakum
+  - Fethiye
+  correctAnswerIndex: 3

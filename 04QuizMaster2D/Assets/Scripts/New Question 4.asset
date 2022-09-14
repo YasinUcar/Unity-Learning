@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: New Question 4
   m_EditorClassIdentifier: 
   question: 81 plakaya sahip il hangisidir
+  answers:
+  - Yalova
+  - "D\xFCzce"
+  - Zonguldak
+  - "Elez\u0131\u011F"
+  correctAnswerIndex: 1

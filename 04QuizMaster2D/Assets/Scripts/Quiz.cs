@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
+using System.Text;
 public class Quiz : MonoBehaviour
 {
 
@@ -13,7 +13,7 @@ public class Quiz : MonoBehaviour
     [Header("Answers")]
     [SerializeField] GameObject[] answerButtons;
     int correctAnswerIndex;
-    bool hasAnsweredEarly;
+    bool hasAnsweredEarly = true;
 
     [Header("Buttons Collor")]
     [SerializeField] Sprite defaultAnswerSprite;
@@ -21,12 +21,21 @@ public class Quiz : MonoBehaviour
 
     [Header("Timer")]
     [SerializeField] Image timerImage;
+    [Header("Timer")]
     Timer timer;
-
     QuestionSO currentQuestion;
+    [Header("Scoring")]
+    [SerializeField] TextMeshProUGUI scoreText;
+    ScoreKeeper score;
+    [Header("ProgressBar")]
+    [SerializeField] Slider progressBar;
+    public bool isComplete;
     void Start()
     {
         timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
+        score = GameObject.FindObjectOfType<ScoreKeeper>();
+        progressBar.maxValue = questions.Count;
+        progressBar.value = 0;
     }
     void Update()
     {
@@ -51,6 +60,7 @@ public class Quiz : MonoBehaviour
             questionText.text = "Doğru!";
             buttonImage = answerButtons[index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
+            score.IncrementCorrectAnswers();
 
         }
         else
@@ -69,6 +79,15 @@ public class Quiz : MonoBehaviour
         DisplayAnswer(index);
         SetButtonState(false);
         timer.CancelTimer();
+        StringBuilder builder = new StringBuilder();
+        builder.AppendFormat("Score: " + score.CalculateScore() + "%");
+
+        scoreText.text = builder.ToString();
+        if (progressBar.value == progressBar.maxValue)
+        {
+            isComplete = true;
+        }
+
     }
     void GetNextQuestion()
     {
@@ -78,6 +97,8 @@ public class Quiz : MonoBehaviour
             SetDefaultButtonSprites();
             GetRandomQuestion();
             DisplayQuestion();
+            score.IncrementQuestionSeen();
+            progressBar.value++;
         }
 
     }

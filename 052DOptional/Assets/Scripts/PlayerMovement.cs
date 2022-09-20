@@ -7,21 +7,37 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
     Rigidbody2D rigidbody;
     [SerializeField] float runSpeed = 5;
+    [SerializeField] float jumpSpeed = 5;
+    CapsuleCollider2D capsuleCollider2D;
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        capsuleCollider2D = GetComponent<CapsuleCollider2D>();
     }
     void Update()
     {
-        print(rigidbody.velocity.x);
         Run();
         FlipSprite();
+
     }
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
 
     }
+    void OnJump(InputValue value)
+    {
+        if (!capsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            return;
+        }
+        if (value.isPressed)
+        {
+            rigidbody.velocity += new Vector2(0f, jumpSpeed);
+        }
+    }
+
+
     void Run()
     {
         Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, rigidbody.velocity.y);

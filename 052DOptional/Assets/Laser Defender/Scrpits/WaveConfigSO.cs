@@ -7,6 +7,8 @@ public class WaveConfigSO : ScriptableObject
     [SerializeField] List<GameObject> enemyPrefabs;
     [SerializeField] Transform pathPrefab;
     [SerializeField] float moveSpeed = 5f;
+
+   
     public int GetEnemyCount()
     {
         return enemyPrefabs.Count;

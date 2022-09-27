@@ -14,14 +14,14 @@ public class Player : MonoBehaviour
     Vector2 maxBounds;
     void Start()
     {
-        InıtBounds();
+        InitBounds();
     }
     void Update()
     {
         Move();
 
     }
-    void InıtBounds()
+    void InitBounds()
     {
         Camera mainCamera = Camera.main;
         minBounds = mainCamera.ViewportToWorldPoint(new Vector2(0, 0));
@@ -40,5 +40,10 @@ public class Player : MonoBehaviour
     {
         rawInput = value.Get<Vector2>();
 
+    }
+    void OnFire(InputValue value)
+    {
+        rawInput = value.Get<Vector2>();
+        print("Space'e basıldı");
     }
 }

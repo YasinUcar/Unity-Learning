@@ -12,9 +12,11 @@ public class Player : MonoBehaviour
     Vector2 rawInput;
     Vector2 minBounds;
     Vector2 maxBounds;
+    Shooter shooter;
     void Start()
     {
         InitBounds();
+        shooter = FindObjectOfType<Shooter>();
     }
     void Update()
     {
@@ -43,7 +45,9 @@ public class Player : MonoBehaviour
     }
     void OnFire(InputValue value)
     {
-        rawInput = value.Get<Vector2>();
-        print("Space'e basıldı");
+        if (shooter != null)
+        {
+            shooter.isFiring = value.isPressed;
+        }
     }
 }

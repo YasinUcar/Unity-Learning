@@ -5,6 +5,12 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] int health = 50;
+    [SerializeField] bool applyCameraShake; //just myPlayer
+    CameraShake cameraShake;
+    void Start()
+    {
+        cameraShake = Camera.main.GetComponent<CameraShake>();
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -12,6 +18,7 @@ public class Health : MonoBehaviour
         if (damage != null)
         {
             TakeDamage(damage.GetDamage());
+            ShakeCamera();
             damage.Hit();
         }
     }
@@ -21,6 +28,13 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+    void ShakeCamera()
+    {
+        if (cameraShake != null && applyCameraShake)
+        {
+            cameraShake.Play();
         }
     }
 }

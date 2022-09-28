@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 1810093333}
   - component: {fileID: 1810093332}
   - component: {fileID: 1810093331}
+  - component: {fileID: 1810093334}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -390,6 +391,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1810093334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810093330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce65011f63e739a49bfaac7b27526334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 1
+  shakeMagnitude: 0.5
 --- !u!1 &1851614365 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1417842325241182656, guid: 4d54eadc8a9939c4abb0200c137c63a8, type: 3}
@@ -410,6 +425,10 @@ MonoBehaviour:
   projectTilePrefab: {fileID: 3056576624281921627, guid: 5c26e288c8b6a2144a77c1fe8f08f9d9, type: 3}
   projectTileSpeed: 10
   projectTileLifeTime: 5
+  baseFiringRate: 0.2
+  useAI: 0
+  firingRateVariance: 0
+  minimumFiringRate: 0.1
   isFiring: 0
 --- !u!1001 &1417842325549145437
 PrefabInstance:
@@ -465,6 +484,10 @@ PrefabInstance:
     - target: {fileID: 1417842325241182659, guid: 4d54eadc8a9939c4abb0200c137c63a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404204695382125523, guid: 4d54eadc8a9939c4abb0200c137c63a8, type: 3}
+      propertyPath: applyCameraShake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d54eadc8a9939c4abb0200c137c63a8, type: 3}

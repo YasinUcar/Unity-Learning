@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    [Header("General")]
     [SerializeField] GameObject projectTilePrefab;
     [SerializeField] float projectTileSpeed = 10f;
     [SerializeField] float projectTileLifeTime = 5f;
+    [SerializeField] float baseFiringRate = 0.2f;
+    [Header("AI")]
+    [SerializeField] bool useAI;
 
-    [SerializeField] float firingRate = 0.2f;
-    public bool isFiring;
+    [SerializeField] float firingRateVariance = 0f;
+    [SerializeField] float minimumFiringRate = 0.1f;
+    [HideInInspector] public bool isFiring;
     Coroutine firingCoroutine;
+    void Start()
+    {
+        if (useAI)
+        {
+            isFiring = true;
+        }
+    }
     void Update()
     {
         Fire();
@@ -32,7 +44,9 @@ public class Shooter : MonoBehaviour
             GameObject instance = Instantiate(projectTilePrefab, transform.position, Quaternion.identity);
             instance.GetComponent<Rigidbody2D>().velocity = transform.up * projectTileSpeed; //transform up yeşil noktayı temsil eder yani yeşil nokta y den ileriye değer verir.
             Destroy(projectTilePrefab, projectTileLifeTime);
-            yield return new WaitForSeconds(firingRate);
+            float timeToNextProjectile = Random.Range(baseFiringRate - firingRateVariance, baseFiringRate + firingRateVariance);
+            timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFiringRate, float.MaxValue);
+            yield return new WaitForSeconds(timeToNextProjectile);
 
         }
     }

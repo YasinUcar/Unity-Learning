@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     [SerializeField] int health = 50;
     [SerializeField] bool applyCameraShake; //just myPlayer
+
     CameraShake cameraShake;
     void Start()
     {

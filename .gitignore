@@ -58,3 +58,31 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Case/Assets/Assets/WeaponSwitch.cs
+Case/Assets/Assets/WeaponSwitch.cs.meta
+Case/Assets/Prefabs 1.meta
+Case/Assets/Scenes/SampleScene.unity
+Case/Assets/Scenes/weaponSwitch.unity
+Case/Assets/Scenes/weaponSwitch.unity.meta
+Case/Assets/Scrpits/WeaponSwitch.meta
+Case/Assets/Scrpits/WeaponSwitch/Prefabs.meta
+Case/Assets/Scrpits/WeaponSwitch/Prefabs/Weapon1.prefab
+Case/Assets/Scrpits/WeaponSwitch/Prefabs/Weapon1.prefab.meta
+Case/Assets/Scrpits/WeaponSwitch/Prefabs/Weapon2.prefab
+Case/Assets/Scrpits/WeaponSwitch/Prefabs/Weapon2.prefab.meta
+Case/Assets/Scrpits/WeaponSwitch/Prefabs/Weapon3.prefab
+Case/Assets/Scrpits/WeaponSwitch/Prefabs/Weapon3.prefab.meta
+Case/Assets/Scrpits/WeaponSwitch/Prefabs/Weapon4.prefab
+Case/Assets/Scrpits/WeaponSwitch/Prefabs/Weapon4.prefab.meta
+Case/Assets/Scrpits/WeaponSwitch/Scripts.meta
+Case/Assets/Scrpits/WeaponSwitch/Scripts/MyWeaponSwitch.cs
+Case/Assets/Scrpits/WeaponSwitch/Scripts/MyWeaponSwitch.cs.meta
+Case/Assets/Scrpits/WeaponSwitch/Scripts/MyWeaponSwitchController.cs
+Case/Assets/Scrpits/WeaponSwitch/Scripts/MyWeaponSwitchController.cs.meta
+Case/Assets/Scrpits/WeaponSwitch/Scripts/WeaponSwitchController.asset
+Case/Assets/Scrpits/WeaponSwitch/Scripts/WeaponSwitchController.asset.meta
+Case/Packages/manifest.json
+Case/Packages/packages-lock.json
+Case/ProjectSettings/ProjectVersion.txt
+Case/UserSettings/EditorUserSettings.asset
+Case/UserSettings/Layouts/CurrentMaximizeLayout.dwlt

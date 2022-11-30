@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _verticalSpeed: 5
   _horizontalSpeed: 5
+  _jumpForce: {x: 0, y: 291, z: 0}
+  _jumpSpeed: 379.4

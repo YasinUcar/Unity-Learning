@@ -12,14 +12,21 @@ namespace TopDownShooter.PlayerMovement
         private void Update()
         {
             Movement();
+
         }
         private void Movement()
         {
             _rigidbody.MovePosition(_rigidbody.position + _rigidbody.transform.forward * _inputData.Vertical *
-                _playermovementSettings.VerticalSpeed*Time.deltaTime);
+                _playermovementSettings.VerticalSpeed * Time.deltaTime);
             _rigidbody.MovePosition(_rigidbody.position + _rigidbody.transform.right * _inputData.Horizontal *
-                _playermovementSettings.HorizontalSpeed*Time.deltaTime);
+                _playermovementSettings.HorizontalSpeed * Time.deltaTime);
 
+        }
+        private void Jump()
+        {
+            bool spaceKeyDown = Input.GetKeyDown(KeyCode.Space);
+            if (spaceKeyDown)
+                _rigidbody.AddForce(_playermovementSettings.JumpForce * _playermovementSettings.JumpSpeed * Time.deltaTime, ForceMode.Impulse);
         }
     }
 }

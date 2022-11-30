@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TopDownShooter.Shooting;
 namespace TopDownShooter.Camera
 {
     public class CameraController : MonoBehaviour
@@ -9,10 +9,13 @@ namespace TopDownShooter.Camera
         [SerializeField] private CameraSettings _cameraSettings;
         [SerializeField] private Transform _targetTransform;
         [SerializeField] private Transform _cameraTransform;
+        [SerializeField] private ShootingManager _shootingManager;
         private void Update()
         {
             CameraRotationFollow();
             CameraMovementFollow();
+            if (Input.GetKeyDown(KeyCode.Space))
+                _shootingManager.Shoot(_cameraTransform.transform.position, _cameraTransform.forward);
         }
         private void CameraRotationFollow()
         {

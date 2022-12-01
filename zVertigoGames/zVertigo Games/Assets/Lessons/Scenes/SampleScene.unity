@@ -471,7 +471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cameraSettings: {fileID: 11400000, guid: f2e94bdfdb3f7ea43a6172e6986c2b40, type: 2}
-  _targetTransform: {fileID: 805447165}
+  _targetTransform: {fileID: 1889154244}
   _cameraTransform: {fileID: 963194228}
   _shootingManager: {fileID: 798135241}
 --- !u!114 &798135241
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c862d06b1d7b14081de0e9fc7bbe10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &798135242
+--- !u!114 &798135244
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -495,19 +495,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 798135235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25ecf54f932d3b4c9c23f843b740130, type: 3}
+  m_Script: {fileID: 11500000, guid: d74bbc81459788a4696bbcd177fa4202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputData: {fileID: 11400000, guid: 3e21fb5604fba8b48ae8c25ac5b5caff, type: 2}
-  _tower: {fileID: 841030995}
+  _rotationInput: {fileID: 11400000, guid: 3e21fb5604fba8b48ae8c25ac5b5caff, type: 2}
+  _towerTransform: {fileID: 841030995}
+  _towerRotationSettings: {fileID: 11400000, guid: 32450d2f471790446bf30811d8ad57b3, type: 2}
+--- !u!4 &798135245 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3990507018250247585, guid: 3f0a82f5aeac0c141b0d6cc36e02db2f, type: 3}
+  m_PrefabInstance: {fileID: 3990507019031334501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &805447160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2837756695336198129, guid: 3f0a82f5aeac0c141b0d6cc36e02db2f, type: 3}
-  m_PrefabInstance: {fileID: 3990507019031334501}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &805447165 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4482514019075188800, guid: 3f0a82f5aeac0c141b0d6cc36e02db2f, type: 3}
   m_PrefabInstance: {fileID: 3990507019031334501}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &805447167
@@ -524,6 +525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 798135237}
   _inputData: {fileID: 11400000, guid: 2121c50c227d7e34d963f22626a19872, type: 2}
+  _targetTransform: {fileID: 798135245}
   _playermovementSettings: {fileID: 11400000, guid: 287f24fe0727c624abc094c719ae40fd, type: 2}
 --- !u!4 &841030995 stripped
 Transform:
@@ -677,6 +679,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _controlRigidbodySettings: {fileID: 11400000, guid: d819bb863577c65428933184ca225c51, type: 2}
+--- !u!4 &1889154244 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3410551531691480558, guid: 3f0a82f5aeac0c141b0d6cc36e02db2f, type: 3}
+  m_PrefabInstance: {fileID: 3990507019031334501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2654815462750547047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -732,6 +739,18 @@ PrefabInstance:
       propertyPath: _rotationInputData
       value: 
       objectReference: {fileID: 11400000, guid: 3e21fb5604fba8b48ae8c25ac5b5caff, type: 2}
+    - target: {fileID: 2654815462274166435, guid: de84214d647fb5a4fb2c51ae2abe05e6, type: 3}
+      propertyPath: _inputDataArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654815462274166435, guid: de84214d647fb5a4fb2c51ae2abe05e6, type: 3}
+      propertyPath: _inputDataArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2121c50c227d7e34d963f22626a19872, type: 2}
+    - target: {fileID: 2654815462274166435, guid: de84214d647fb5a4fb2c51ae2abe05e6, type: 3}
+      propertyPath: _inputDataArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3e21fb5604fba8b48ae8c25ac5b5caff, type: 2}
     - target: {fileID: 2654815462274166436, guid: de84214d647fb5a4fb2c51ae2abe05e6, type: 3}
       propertyPath: m_Name
       value: InputManager
@@ -763,11 +782,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3990507018081919761, guid: 3f0a82f5aeac0c141b0d6cc36e02db2f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 3990507018081919764, guid: 3f0a82f5aeac0c141b0d6cc36e02db2f, type: 3}
+      propertyPath: m_Name
+      value: TankCamera
       objectReference: {fileID: 0}
     - target: {fileID: 3990507018081919764, guid: 3f0a82f5aeac0c141b0d6cc36e02db2f, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3990507018081919766, guid: 3f0a82f5aeac0c141b0d6cc36e02db2f, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3990507018250247585, guid: 3f0a82f5aeac0c141b0d6cc36e02db2f, type: 3}
       propertyPath: m_RootOrder

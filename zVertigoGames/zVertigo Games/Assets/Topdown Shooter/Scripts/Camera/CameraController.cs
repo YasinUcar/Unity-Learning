@@ -12,8 +12,8 @@ namespace TopDownShooter.Camera
         [SerializeField] private ShootingManager _shootingManager;
         private void Update()
         {
-            CameraRotationFollow();
             CameraMovementFollow();
+            CameraRotationFollow();
             if (Input.GetKeyDown(KeyCode.Space))
                 _shootingManager.Shoot(_cameraTransform.transform.position, _cameraTransform.forward);
         }
@@ -24,6 +24,8 @@ namespace TopDownShooter.Camera
         }
         private void CameraMovementFollow()
         {
+            //Vector3 offset = (_cameraTransform.right * _cameraSettings.PositionOffset.x) + (_cameraTransform.up * _cameraSettings.PositionOffset.y) +
+            //(_cameraTransform.forward * _cameraSettings.PositionOffset.z); //bu değer position offset yerine kullanılırsa daha sağlıklı olur
             _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _targetTransform.position +
                 _cameraSettings.PositionOffset, Time.deltaTime * _cameraSettings.PositionLerp);
         }
